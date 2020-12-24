@@ -42,7 +42,7 @@ pub fn ray_intersection_with_triangle<N: RealField>(
     let n = ab.cross(&ac);
     let d = n.dot(&ray.dir);
 
-    // the normal and the ray direction are parallel
+    // the normal and the ray direction are perpendicular
     if d.is_zero() {
         return None;
     }
